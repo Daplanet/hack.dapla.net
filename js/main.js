@@ -13,7 +13,7 @@ var libs = [
     "escapes"
 ];
 
-require(libs, function($,escapes) {
+require(libs, function($) {
   $(document).ready(function() {
     escapes('/screen.txt', function () {
       $(this).appendTo('#art');
