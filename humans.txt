@@ -1,0 +1,29 @@
+/* TEAM */
+	Author: Denzuko
+	Site: denzuko.freeshell.org
+	Twitter: denzuko
+
+/* THANKS */
+	Hosting: SDF
+	Twitter: @sdf_pubnix
+	From: Seattle, Wa, Usa
+	URL: sdf.org
+
+/* SITE */
+	Standards: HTML5, CSS3, JavaScript
+	Components: jQuery
+	Software: vim
+
+.......  ...... . .......
+. ... . .   .. .. . ... .
+. ... . .. ...  . . ... .
+....... . ... ... .......
+... .... . .....   ..... 
+........ .. ...... . . ..
+...  ..... .........   ..
+.  ..............  ......
+. .. .. ......  ..... .  
+....... .. ... .. . .. ..
+. ... .  .. . ...........
+. ... . ..... ....... . .
+....... ...  .. . .  .  .
