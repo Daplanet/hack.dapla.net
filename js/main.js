@@ -5,7 +5,7 @@ requirejs.config({
         'escapes': 'escapes.min'
     }, 
     shim: {
-        'jquery.terminal': { dep: ['jquery'] },
+        'jquery.terminal': { dep: ['jquery']},
 	      'escapes': { deps: ['jquery']}
     }
 });
@@ -15,7 +15,7 @@ var libs = [
     "escapes"
 ];
 
-require(libs, function($) {
+require(libs, function($, undefined) {
   $(document).ready(function() {
     escapes('/screen.txt', function () {
       $(this).appendTo('#art');
