@@ -41,8 +41,7 @@ require(libs, function($, undefined) {
 	ga('create', 'UA-31453007-3', 'hack.dapla.net');
 	ga('send', 'pageview');
   });
-});
-
+  
   $('#term').terminal(function(command, term) {
         if (command !== '') {
             try {
@@ -61,3 +60,4 @@ require(libs, function($, undefined) {
         name: 'term',
         prompt: 'js> '
       });
+});
