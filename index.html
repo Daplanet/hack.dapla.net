@@ -9,6 +9,8 @@
     <style type="text/css">
       @import url('/css/jquery.terminal.css') screen, projection;
     </style>
+    <script type="text/javascript" src="./js/jquery.terminal.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script data-main='js/main' src="js/require.js"></script>
   </head>
   <body oncontextmenu="return false;" onmousedown="return false;">
@@ -32,7 +34,6 @@
     </section>
     <footer>
       <section id="copyright"><p>&copy; 2001-2025 Cyberlordian Consortium. All Rights Reserved.</p></section>
-      <script type="text/javascript" src="./js/jquery.terminal.min.js"></script>
       <script type="text/javascript">
           $('#term').terminal(function(command, term) {
         if (command !== '') {
