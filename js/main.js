@@ -1,10 +1,12 @@
 requirejs.config({
     paths: {
-	'jquery': 'jquery.min',
+        'jquery': 'jquery.min',
+        'jquery.terminal': 'jquery.terminal.min',
         'escapes': 'escapes.min'
     }, 
     shim: {
-	'escapes': { deps: ['jquery']}
+        'jquery.terminal': { dep: ['jquery'] },
+	      'escapes': { deps: ['jquery']}
     }
 });
 
@@ -18,6 +20,26 @@ require(libs, function($) {
     escapes('/screen.txt', function () {
       $(this).appendTo('#art');
       $("#art").fadeIn(500);
+          
+      $('#term_demo').terminal(function(command, term) {
+        if (command !== '') {
+            try {
+                var result = window.eval(command);
+                if (result !== undefined) {
+                    term.echo(new String(result));
+                }
+            } catch(e) {
+                term.error(new String(e));
+            }
+        } else {
+           term.echo('');
+        }
+      }, {
+        greetings: 'HackOS v1.0',
+        name: 'js_demo',
+        height: 200,
+        prompt: 'js> '
+      });
     });
 
     setTimeout(function(){
