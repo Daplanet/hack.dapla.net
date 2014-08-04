@@ -20,6 +20,24 @@ require(libs, function($, terminal) {
     escapes('/screen.txt', function () {
       $(this).appendTo('#art');
       $("#art").fadeIn(500);
+      $('#term').terminal(function(command, term) {
+        if (command !== '') {
+            try {
+                var result = window.eval(command);
+                if (result !== undefined) {
+                    term.echo(new String(result));
+                }
+            } catch(e) {
+                term.error(new String(e));
+            }
+        } else {
+           term.echo('');
+        }
+      }, {
+        greetings: 'HackOS v1.0',
+        name: 'term',
+        prompt: 'js> '
+      });
     });
 
     setTimeout(function(){
@@ -41,23 +59,4 @@ require(libs, function($, terminal) {
 	ga('create', 'UA-31453007-3', 'hack.dapla.net');
 	ga('send', 'pageview');
   });
-  
-  $('#term').terminal(function(command, term) {
-        if (command !== '') {
-            try {
-                var result = window.eval(command);
-                if (result !== undefined) {
-                    term.echo(new String(result));
-                }
-            } catch(e) {
-                term.error(new String(e));
-            }
-        } else {
-           term.echo('');
-        }
-      }, {
-        greetings: 'HackOS v1.0',
-        name: 'term',
-        prompt: 'js> '
-      });
 });
