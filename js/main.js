@@ -36,8 +36,7 @@ require(libs, function($) {
         }
       }, {
         greetings: 'HackOS v1.0',
-        name: 'js_demo',
-        height: 200,
+        name: 'term',
         prompt: 'js> '
       });
     });
