@@ -21,7 +21,7 @@ require(libs, function($) {
       $(this).appendTo('#art');
       $("#art").fadeIn(500);
           
-      $('#term_demo').terminal(function(command, term) {
+      $('#term').terminal(function(command, term) {
         if (command !== '') {
             try {
                 var result = window.eval(command);
