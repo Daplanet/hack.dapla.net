@@ -41,14 +41,18 @@
       $('#term').terminal(function(command, term) {
         if (command !== '') {
             try {
-                var result = window.eval(command);
-                if (result !== undefined) {
+              switch(command) {
+                case("player"):
+                  location.href = "http://bit.ly/denzuko";
+  
+                default:
+                  var result = window.eval(command);
+                  if (result !== undefined) {
                     term.echo(new String(result));
-                }
-                
                     socket.emit('chat message', command);
-                    
-                    $('#m').val('');
+                  }
+              }
+              $('#term').val('');
             } catch(e) {
                 term.error(new String(e));
             }
@@ -56,6 +60,7 @@
            term.echo('');
         }
       }, {
+        greeting: '',
         name: 'term',
         height: 300,
         prompt: '% '
