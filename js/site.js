@@ -31,7 +31,7 @@ $(document).ready(function() {
            term.echo('');
         }
       }, {
-        greeting: 'HackOS',
+        greetings: 'HackOS',
         name: 'term',
         height: 300,
         prompt: '% '
