@@ -12,9 +12,11 @@
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/escapes.min.js"></script>
     <script type="text/javascript" src="./js/jquery.terminal.min.js"></script>
+    <script type="text/javascript" src="./js/socketio.js"></script>
     <script type="text/javascript">
-  $(document).ready(function() {
-    escapes('/screen.txt', function () {
+    $(document).ready(function() {
+      escapes('/screen.txt', function () {
+      var socket = io();
       $(this).appendTo('#art');
       $("#art").fadeIn(500);
       $('#term').terminal(function(command, term) {
@@ -24,6 +26,10 @@
                 if (result !== undefined) {
                     term.echo(new String(result));
                 }
+                
+                    socket.emit('chat message', command);
+                    
+                    $('#m').val('');
             } catch(e) {
                 term.error(new String(e));
             }
