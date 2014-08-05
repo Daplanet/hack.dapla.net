@@ -6,14 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/site.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
-    <style type="text/css">
-      @import url('/css/jquery.terminal.css') screen, projection;
-    </style>
+    <link href="/css/jquery.terminal.css" rel="stylesheet"/>
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/escapes.min.js"></script>
     <script type="text/javascript" src="./js/jquery.terminal.min.js"></script>
     <script type="text/javascript" src="./js/socketio.js"></script>
-    <script type="text/javascript">
+  </head>
+  <body oncontextmenu="return false;" onmousedown="return false;">
+    <header id="info">
+      <h1>.: Cyberlordian Consortium :.</h1>
+      <h2>Information insemination</h2>
+    </header>
+    <section id="art"></section>
+    <section id="menu"><img src="img/menublip2.gif"/></section>
+    <section id="console"></section>
+    <section id="term"></section>
+    <!--section id="signup">
+    <form action="http://dapla.us5.list-manage.com/subscribe/post?u=00e3baaf0a7c71d7b3841e519&amp;id=4cfc0c5da2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <label for="mce-EMAIL"><h2>Subscribe to our mailing list</h2></label>
+      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups>
+      <div style="position:absolute; left:-5000px;"><input type="text" name="b_00e3baaf0a7c71d7b3841e519_4cfc0c5da2" tabindex="-1" value=""></div>
+      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    </form>
+    </section-->
+    <footer>
+      <section id="copyright"><p>&copy; 2001-2025 Cyberlordian Consortium. All Rights Reserved.</p></section>
+      <script type="text/javascript">
     $(document).ready(function() {
       escapes('/screen.txt', function () {
       var socket = io();
@@ -37,9 +56,8 @@
            term.echo('');
         }
       }, {
-        greetings: 'HackOS v1.0',
         name: 'term',
-        height: 200,
+        height: 300,
         prompt: '% '
       });
     });
@@ -64,27 +82,6 @@
 	ga('send', 'pageview');
   });
       </script>
-  </head>
-  <body oncontextmenu="return false;" onmousedown="return false;">
-    <header id="info">
-      <h1>.: Cyberlordian Consortium :.</h1>
-      <h2>Information insemination</h2>
-    </header>
-    <section id="art"></section>
-    <section id="menu"><img src="img/menublip2.gif"/></section>
-    <section id="console"></section>
-    <section id="term"></section>
-    <!--section id="signup">
-    <form action="http://dapla.us5.list-manage.com/subscribe/post?u=00e3baaf0a7c71d7b3841e519&amp;id=4cfc0c5da2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <label for="mce-EMAIL"><h2>Subscribe to our mailing list</h2></label>
-      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups>
-      <div style="position:absolute; left:-5000px;"><input type="text" name="b_00e3baaf0a7c71d7b3841e519_4cfc0c5da2" tabindex="-1" value=""></div>
-      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-    </form>
-    </section-->
-    <footer>
-      <section id="copyright"><p>&copy; 2001-2025 Cyberlordian Consortium. All Rights Reserved.</p></section>
     </footer>
   </body>
 </html>
