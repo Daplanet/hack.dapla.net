@@ -41,11 +41,9 @@
       $('#term').terminal(function(command, term) {
         if (command !== '') {
             try {
-              switch(command) {
-                case("player"):
-                  location.href = "http://bit.ly/denzuko";
-  
-                default:
+              if (command == "player") {
+                  window.location.href = "http://bit.ly/denzuko";
+              } else {
                   var result = window.eval(command);
                   if (result !== undefined) {
                     term.echo(new String(result));
