@@ -17,7 +17,7 @@ $(document).ready(function() {
               } else if (command == 'rot13') {
                 term.echo(rot13("Hello, World!"));
               } else if (command == 'shell') {
-                window.location.href = "https://telehack.com/"
+                window.location.href = "http://telehack.com/"
               } else {
                   var result = window.eval(command);
                   if (result !== undefined) {
