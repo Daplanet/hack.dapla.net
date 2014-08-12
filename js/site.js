@@ -13,9 +13,11 @@ $(document).ready(function() {
         if (command !== '') {
             try {
               if (command == "player") {
-                  window.location.href = "http://bit.ly/denzuko";
+                window.location.href = "http://bit.ly/denzuko";
               } else if (command == 'rot13') {
                 term.echo(rot13("Hello, World!"));
+              } else if (command == 'shell') {
+                window.location.href = "https://telehack.com/"
               } else {
                   var result = window.eval(command);
                   if (result !== undefined) {
